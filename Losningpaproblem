@@ -1,0 +1,15 @@
+var born = "1994-09-27"
+
+prompt("När är du född(ÅÅÅÅ-MM-DD)");
+
+var div = 365.25 * 24 * 60 * 60 * 1000;
+
+var rightNow = new Date();
+
+var diff = rightNow.getTime() - Date.parse(born);
+
+Math.floor((rightNow.getTime() - Date.parse(born)));
+
+var div = 365.25 / 24 / 60 / 60 / 1000;
+
+

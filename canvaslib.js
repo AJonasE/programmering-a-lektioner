@@ -69,6 +69,14 @@ function startCanvas(id) {
                 console.log("Draw " + color + " stroke.colored rectangle at " + x + "/" + y +
                     ", width/height was " + width + "/" + height);
             }
+        },
+        clearRect : function (x, y, width, height, color, log) {
+        	context2D.save();
+            context2D.clearRect(x, y, width, height);
+        	context2D.restore();
+            if ( log ) {
+                console.log("Cleared rectangle at " + x + "/" + y + ", width/height was " + width + "/" + height);
+            }
             return this;
         },
         text : function(text, x, y, color, size) {
