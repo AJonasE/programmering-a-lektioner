@@ -1,15 +1,25 @@
-var born = "1994-09-27"
+var born = "2011"
 
-prompt("När är du född(ÅÅÅÅ-MM-DD)");
+var div =  24 * 60 * 60 * 1000;
 
-var div = 365.25 * 24 * 60 * 60 * 1000;
+var fdag = prompt("Vilket år är du född?(ÅÅÅÅ)");
+var fodag = prompt("Vilken månad är du född?(MM)");
+// var foddag = prompt("Vilken dag är du född?(DD)");
 
-var rightNow = new Date();
+var ar = born - fdag;
 
-var diff = rightNow.getTime() - Date.parse(born);
+var manad = fodag - rightNow.getMonth();
 
-Math.floor((rightNow.getTime() - Date.parse(born)));
-
-var div = 365.25 / 24 / 60 / 60 / 1000;
+alert"Du är (ar)";
 
 
+
+
+
+
+//rightNow.getMonth()
+// var manad = Math.floor((rightNow.getTime())) / div
+// var now = new Date();
+// var diff = rightNow.getTime() - Date.parse(born);
+// var alder = Math.floor((rightNow.getTime() - Date.parse(born)));
+// var minalder = alder / div;
