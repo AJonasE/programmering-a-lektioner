@@ -1,23 +1,34 @@
-var born = "2011"
+var TodayDate = new Date();
+var div = 365.25 * 24 * 60 * 60 * 1000;
 
-var div =  24 * 60 * 60 * 1000;
+var foddArtal = prompt("Vilket år är du född?(ÅÅÅÅ)");
+var foddManad = prompt("Vilken månad är du född?(MM)");
+var foddDag = prompt("Vilken dag är du född?(DD)");
 
-var fdag = prompt("Vilket år är du född?(ÅÅÅÅ)");
-var fodag = prompt("Vilken månad är du född?(MM)");
-// var foddag = prompt("Vilken dag är du född?(DD)");
+var artal = foddArtal * div
+var today = TodayDate / div
+var nagat = - (today - artal) / div;
+var ar = Math.floor(2011 - nagat);
 
-var ar = born - fdag;
-
-var manad = fodag - rightNow.getMonth();
-
-alert"Du är (ar)";
-
-
+var day = today - (today - 1);
 
 
+alert("Du är (ar) år gammal!")
 
 
-//rightNow.getMonth()
+// har svårt att komma vidare
+
+
+
+
+
+
+
+
+
+
+// var manad = foddManad - rightNow.getMonth();
+// rightNow.getMonth()
 // var manad = Math.floor((rightNow.getTime())) / div
 // var now = new Date();
 // var diff = rightNow.getTime() - Date.parse(born);
