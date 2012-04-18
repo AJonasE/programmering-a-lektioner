@@ -5,6 +5,56 @@ var foddArtal = prompt("Vilket år är du född?(ÅÅÅÅ)");
 var foddManad = prompt("Vilken månad är du född?(MM)");
 var foddDag = prompt("Vilken dag är du född?(DD)");
 
+var antalAr = TodayDate.getFullYear() - foddArtal; // ålder  i år
+
+
+// Jämför månad
+// Om antalet < 0
+   // Minska år med 1
+   // Öka månad med 12
+
+
+var antalManad = TodayDate.getMonth() - foddManad;
+if (antalManad < 0)
+    {
+    antalAr - 1 , antalManad + 12)
+    }
+
+
+
+
+// Jämför dagar på året
+// Om antalet < 0
+   // Se månad
+   // anpassa till månaden 28, 29, 30, 31 dagar
+
+var antalDag = TodayDate.getDate() - foddDag;
+if (antalDag < 0)
+    {
+    antalManad - 12 , antalDag + 365)
+    }
+
+
+
+
+var dayInMonths = [];
+dayInMonths[0] = 31; // Januari
+dayInMonths[1] = ( TodayDate.getFullYear() % 4 === 0 ) ? 29 ; 28; // Om skottår 29
+dayInMonths[2] = 31;
+dayInMonths[3] = 30;
+dayInMonths[4] = 31;
+dayInMonths[5] = 30;
+dayInMonths[6] = 31;
+dayInMonths[7] = 31;
+dayInMonths[8] = 30;
+dayInMonths[9] = 31;
+dayInMonths[10] = 30;
+dayInMonths[11] = 31;
+
+
+
+
+
 var artal = foddArtal * div
 var today = TodayDate / div
 var nagat = - (today - artal) / div;
@@ -13,10 +63,7 @@ var ar = Math.floor(2011 - nagat);
 var day = today - (today - 1);
 
 
-alert("Du är (ar) år gammal!")
-
-
-// har svårt att komma vidare
+alert("Du är " + ar + " år gammal!")
 
 
 
